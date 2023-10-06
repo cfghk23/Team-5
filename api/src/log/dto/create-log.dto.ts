@@ -1,8 +1,11 @@
-export class CreateStudentDto {
+export class CreateLogDto {
   
-  stars: number;
+  
+  timestamp: string;
+
 
   points: number;
+
 
   school: string;
 
