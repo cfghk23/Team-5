@@ -1,6 +1,11 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 
+//Change to new font, Ref: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
+import { Inter } from 'next/font/google'
+// Wrapper for darkmode provided by shadcn, Ref: https://ui.shadcn.com/docs/dark-mode/next
+import { ThemeProvider } from "@/components/ui/theme-provider"
+//Pop-up, Ref: https://ui.shadcn.com/docs/components/toast
+import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,7 +16,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+        <Toaster />
+      </body>
     </html>
   )
 }
