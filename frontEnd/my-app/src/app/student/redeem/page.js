@@ -6,9 +6,11 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import ProfileCard from "../comps/profile-card";
 import { StudentNavBar } from "../comps/studentNavBar";
-
+import Image from "next/image";
+import  Link  from "next/link";
 
 export default function Redeem() {
     return (<>
@@ -20,8 +22,19 @@ export default function Redeem() {
             <CardDescription>Let's use your point to buy something!</CardDescription>
         </CardHeader>
         <CardContent>
-            <div className="grid grid-col-4">
-            <Card className="grid-flow-col">
+            <div className="grid grid-cols-2 grid-rows-2 grid-flow-row grid-flow-col">
+            <Card>
+                <CardHeader>
+                    <CardTitle>Skin: M-2 Hat Avator</CardTitle>
+                    <CardDescription>Required: 1000 stars</CardDescription>
+                    <Image src="/student/redeem/cap.png" width={200} height={200} />
+                    <Button asChild>
+                        <Link href="" className="">Redeem</Link>
+                    </Button>
+                </CardHeader>
+
+            </Card>
+            <Card>
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>
@@ -33,7 +46,7 @@ export default function Redeem() {
                     <p>Card Footer</p>
                 </CardFooter>
             </Card>
-            <Card className="grid-flow-col">
+            <Card>
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>
@@ -45,7 +58,7 @@ export default function Redeem() {
                     <p>Card Footer</p>
                 </CardFooter>
             </Card>
-            <Card className="grid-flow-col">
+            <Card>
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>
