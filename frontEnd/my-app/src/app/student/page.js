@@ -1,3 +1,4 @@
+"use client"
 import { StudentNavBar } from "./comps/studentNavBar";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,6 +12,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Course } from "./comps/course";
 import { RecentActivity } from "./comps/recent-activity";
+
 
 
 
