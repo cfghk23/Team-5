@@ -1,7 +1,12 @@
 import { StudentNavBar } from "./comps/studentNavBar";
+import {badgeCard} from "./comps/badge-card";
 
 export default function Student() {
     return (
-        <StudentNavBar />
+        <div>
+            <StudentNavBar />
+            <badgeCard/>
+        </div>
+        
     )
 }
