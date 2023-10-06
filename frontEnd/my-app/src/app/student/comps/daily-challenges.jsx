@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react";
 import Question from "./question";
 import {
@@ -8,9 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import "../../styles.css"; 
+import { Button } from "@/components/ui/button"
+import Image from "next/image";
 
-export function DailyChallenge() {
+export default function DailyChallenge() {
   const [gameStarted, setGameStarted] = React.useState(false);
   const [questions, setQuestions] = React.useState([]);
   const [answerChecked, setAnswerChecked] = React.useState(false);
@@ -45,6 +48,9 @@ export function DailyChallenge() {
       .then((data) => setQuestions(data.results));
   }
 
+  function imageClick(){
+    <h1>test</h1>
+  }
   const questionElements = questions.map((question, index) => (
     <Question
       key={index}
@@ -58,24 +64,25 @@ export function DailyChallenge() {
   ));
 
   return gameStarted ? (
-    <div className="flex"> 
-      <img src="../../assets/balloon.jpg" alt="Balloon" /> 
-      <div className="questions-page-content">
-        <h1>Daily Challenges</h1>
+    <div className=""> 
+        <h1 class="place-items-center">Daily Challenges</h1>
+        <div className="questions-page-content flex">
+            <Image onClick={imageClick} src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}></Image>
+            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
+            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
+            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
+            {/* <img src={Image} alt="balloon "> BALLOON </img> */}
         <div className="questions">{questionElements}</div>
+        </div>
         {answerChecked ? (
           <div className="bottom-section">
             <h3>You scored {score}/5 correct answers!</h3>
-            <button className="small-btn" onClick={playAgain}>
-              Play Again
-            </button>
+            <button className="small-btn" onClick={playAgain}>Play Again</button>
           </div>
         ) : (
-          <button className="small-btn" onClick={checkAnswers}>
-            Check Answers
-          </button>
+          <button className="small-btn" onClick={checkAnswers}>Check Answers</button>
         )}
-      </div>
+        <div></div>
     </div>
   ) : (
     <main>
@@ -83,9 +90,9 @@ export function DailyChallenge() {
         <div className="start-game-description">
           <h1>Daily Challenges</h1>
           <p>Test your skills by answering these questions!</p>
-          <button className="start-btn" onClick={startGame}>
+          <Button class=""className="start-btn" onClick={startGame}>
             Start Quiz
-          </button>
+          </Button>
         </div>
       </div>
     </main>
