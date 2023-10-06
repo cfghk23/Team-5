@@ -63,7 +63,7 @@ export function Course({
       <div className="flex flex-col space-y-1 text-sm">
         <div>
           <span> 33% done</span>
-          <h3 className="font-medium leading-none">{course.name}</h3>
+          <h3 className="text-xl font-bold leading-none">{course.name}</h3>
         </div>
         <Button asChild>
           <Link href="student/question">Continue</Link>
