@@ -88,7 +88,6 @@ export function DailyChallenge() {
           </button>
         </div>
       </div>
-      <img src={blobBlue} alt="blue blob" className="blob-blue" />
     </main>
   );
 }
