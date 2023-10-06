@@ -18,19 +18,21 @@ export class TimeDepositService {
         timeDeposit.endAmount = createTimeDepositDto.endAmount;
         timeDeposit.startDate = createTimeDepositDto.startDate;
         timeDeposit.endDate = createTimeDepositDto.endDate;
-    
-        return this.usersRepository.save(user);
+        timeDeposit.status = createTimeDepositDto.status;
+        
+        
+        return this.timeDepositRepository.save(timeDeposit);
       }
     
-      async findAll(): Promise<User[]> {
-        return this.usersRepository.find();
+      async findAll(): Promise<TimeDeposit[]> {
+        return this.timeDepositRepository.find();
       }
     
-      findOne(id: number): Promise<User> {
-        return this.usersRepository.findOneBy({ id: id });
+      findOne(id: number): Promise<TimeDeposit> {
+        return this.timeDepositRepository.findOneBy({ id: id });
       }
     
       async remove(id: string): Promise<void> {
-        await this.usersRepository.delete(id);
+        await this.timeDepositRepository.delete(id);
       }
 }
