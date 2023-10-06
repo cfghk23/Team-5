@@ -6,7 +6,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
   
-export function badgeCard(){
+export default function BadgeCard(){
     return (
         <div>
             <h1>Current Badges (0/100 unlocked) </h1>
@@ -58,6 +58,6 @@ export function badgeCard(){
                 <p>Participate one offline event</p>
             </CardContent>
         </Card>
-        </div>
+    </div>
     )
 }

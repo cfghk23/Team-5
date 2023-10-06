@@ -1,11 +1,13 @@
 import { StudentNavBar } from "./comps/studentNavBar";
-import {badgeCard} from "./comps/badge-card";
+import {BadgeCard} from "./comps/badge-card";
+import {DailyChallenge} from "./comps/daily-challenges";
 
 export default function Student() {
     return (
         <div>
-            <StudentNavBar />
-            <badgeCard/>
+            <StudentNavBar/>
+            <DailyChallenge/>
+            {/* <BadgeCard/> */}
         </div>
         
     )
