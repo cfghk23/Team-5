@@ -1,8 +1,8 @@
-import { StudentNavBar } from "../../frontEnd/my-app/src/";
+"use client"
 
-export default function Student() {
-    return (
-        <StudentNavBar />
-    )
+import PerformanceChart from "@/components/PerformanceChart";
+
+
+export default function Home() {
+  return <h1>hi</h1>
 }
-
