@@ -32,4 +32,19 @@ export class StudentService {
   async remove(id: string): Promise<void> {
     await this.studentRepository.delete(id);
   }
+
+  async addStars(id: number, stars: number) {
+    const student = await this.findOne(id);
+    const currentStars = student.stars;
+    await this.studentRepository.save({ id: id, stars: currentStars + stars });
+  }
+
+  async addPoints(id: number, points: number) {
+    const student = await this.findOne(id);
+    const currentPoints = student.points;
+    await this.studentRepository.save({
+      id: id,
+      points: currentPoints + points,
+    });
+  }
 }
