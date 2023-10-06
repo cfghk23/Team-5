@@ -8,6 +8,8 @@ import {
   } from "@/components/ui/card"
 import ProfileCard from "../comps/profile-card";
 import { StudentNavBar } from "../comps/studentNavBar";
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function Profile() {
     return (<>
@@ -61,6 +63,9 @@ export default function Profile() {
                 </CardContent>
             </Card>
             </div>
+            <Button asChild>
+                <Link href="/student/redeem" >Redeem Reward</Link>
+            </Button>
         </CardContent>
         </Card>
     </div>
