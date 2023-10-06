@@ -6,7 +6,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
   
-export default function BadgeCard(){
+export function BadgeCard(){
     return (
         <div>
             <h1>Current Badges (0/100 unlocked) </h1>
