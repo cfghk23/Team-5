@@ -15,74 +15,50 @@ export function badgeCard(){
         <Card>
             <CardHeader>
                 <CardTitle>Fireman</CardTitle>
-                <CardDescription>Complete 30 daily challenges in a streak</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Complete 30 daily challenges in a streak</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         <Card>
             <CardHeader>
                 <CardTitle>SUPERMAN</CardTitle>
-                <CardDescription>Complete 300 daily challenges in a streak</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Complete 300 daily challenges in a streak</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         <Card>
             <CardHeader>
                 <CardTitle>ULTRAMAN</CardTitle>
-                <CardDescription>Complete 1000 daily challenges</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Complete 1000 daily challenges</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         <Card>
             <CardHeader>
                 <CardTitle>MONEY KEEPER</CardTitle>
-                <CardDescription>Create a time deposit</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Create a time deposit</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         <Card>
             <CardHeader>
                 <CardTitle>KEPT THE GOLD</CardTitle>
-                <CardDescription>Complete the time deposit</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Complete the time deposit</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         <Card>
             <CardHeader>
                 <CardTitle>FRIENDS ACQUIRED</CardTitle>
-                <CardDescription>Participate one offline event</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <p>Participate one offline event</p>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
         </div>
     )
