@@ -10,12 +10,16 @@ import Image from "next/image";
 // import { useEffect } from "react";
 import axios from "axios";
 
-export default function ProfileCard() {
-  const getStudent = async () => {
-    const students = await axios.get("localhost:3000/api/student");
-  };
+export default async function ProfileCard() {
+  const fetchdata = await axios.get("http://localhost:9000/student");
+  const students = fetchdata.data;
+  const student = students[0];
+  const studentId = student.id;
 
-  const data = student[0];
+  const fetchuser = await axios.get(`http://localhost:9000/users/${studentId}`);
+
+  const user = fetchuser.data;
+  console.log(user);
 
   //   const data = {
   //     imageUrl:
@@ -25,6 +29,7 @@ export default function ProfileCard() {
   //     class: "1A",
   //     starsBanked: 100,
   //   };
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -41,10 +46,13 @@ export default function ProfileCard() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="bg-red-500">M2 bank account id: {data.userId}</div>
-        <div>Name: {data.name}</div>
-        <div>Class: {data.class}</div>
-        <div>Stars banked: {data.starsBanked}</div>
+        <div className="bg-red-500">M2 bank account id: {}</div>
+        <div>
+          Name: {user.firstName} {user.lastName}
+        </div>
+        <div>School: {student.school}</div>
+        <div>Class: {student.class}</div>
+        <div>Stars: {student.stars}</div>
       </CardContent>
     </Card>
   );
