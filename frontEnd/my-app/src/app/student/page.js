@@ -10,12 +10,13 @@ import {
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Course } from "./comps/course";
+import { RecentActivity } from "./comps/recent-activity";
 
 
 
 export default function Student() {
     const courses = [{
-        name: "course1",
+        name: "Financial Budgeting 101",
         image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2730&q=80",
     }];
 
@@ -56,25 +57,28 @@ export default function Student() {
                 </Card>
             </div>
 
-            <div className="grid grid-cols-2">
-                <div className="flex items-center justify-between">
-                    <div className="space-y-1">
-                        <h2 className="text-2xl font-semibold tracking-tight">
-                            Continue with your lesson
-                        </h2>
-                        <p className="text-sm text-muted-foreground">
-                            School ABC
-                        </p>
-                    </div>
-                </div>
+            <Separator className="my-4" />
 
-                {/* create a horizontal line */}
-                <Separator className="my-4" />
 
-                <div className="grid grid-cols-2">
-                    <div className="relative">
-                        {/* allow horizontal scrolling when too much item */}
-                        <ScrollArea>
+
+            {/* create a horizontal line */}
+
+
+
+            {/* allow horizontal scrolling when too much item */}
+            <div className="grid grid-cols-2 items-center ">
+
+                <Card>
+
+                    <CardHeader>
+                        <CardTitle>Continue your lesson</CardTitle>
+                    </CardHeader>
+                    {/* <p className="text-sm text-muted-foreground">
+                    School ABC
+                </p> */}
+
+                    <CardContent className="ml-2">
+                        <ScrollArea className="col-span-1" >
                             <div className=" space-x-4 pb-4">
                                 {courses.map((course) => (
                                     <Course
@@ -89,24 +93,24 @@ export default function Student() {
                             </div>
                             <ScrollBar orientation="horizontal" />
                         </ScrollArea>
-                    </div>
+                    </CardContent>
+                </Card>
 
+                {/* notification board */}
+                <Card className="col-span-1 h-full">
+                    <CardHeader>
+                        <CardTitle>Recents </CardTitle>
+                        <CardDescription>
+                            Recent activity of your classmates
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <RecentActivity />
+                    </CardContent>
+                </Card>
 
-                    {/* notification board */}
-                    <Card className="col-span-3">
-                        <CardHeader>
-                            <CardTitle>Recents </CardTitle>
-                            <CardDescription>
-                                Recent activity of your classmates
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
+            </div>
 
-                        </CardContent>
-                    </Card>
-
-                </div>
-            </div >
         </>
     )
 }

@@ -1,19 +1,42 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
 
 //backend? useEffect and fetch from backend API
 
 const data = [
   {
     imageUrl: "",
-    fallback: "student",
-    name: "Olivia Martin",
-    activity: "just got 'fire' badgee",
+    fallback: "ST",
+    name: "Student 1",
+    activity: "just got 'fire' badge!",
+  },
+  {
+    imageUrl: "",
+    fallback: "ST",
+    name: "Student 2",
+    activity: "just reached 1st in class!",
+  },
+  {
+    imageUrl: "",
+    fallback: "ST",
+    name: "Student 3",
+    activity: "Just redeemed MacDonald $10 coupon!",
+  },
+  {
+    imageUrl: "",
+    fallback: "ST",
+    name: "Student 4",
+    activity: "just reached 3rd on leaderboard(Hong Kong)!",
+  },
+  {
+    imageUrl: "",
+    fallback: "ST",
+    name: "Student 5",
+    activity: "Just deposited 1000 stars !",
   },
 ];
 
-export function RecentSales() {
+export function RecentActivity() {
   return (
     // possible backend data through db's orm :
     // Customer:{name,email,icon} , order:{product:{price:}}
@@ -28,13 +51,11 @@ export function RecentSales() {
               <AvatarImage src={user.imageUrl} alt="Avatar" />
               <AvatarFallback>{user.fallback}</AvatarFallback>
             </Avatar>
-
             <div className="ml-4 space-y-1">
               <p className="text-sm font-medium leading-none">{user.name}</p>
             </div>
-
             {/* push to left in flex using  ml-auto */}
-            <div className="ml-auto font-medium">${user.activity}</div>
+            <div className="ml-10 font-medium">{user.activity}</div>
           </div>
         );
       })}
