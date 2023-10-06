@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 const DepositCalculator = () => {
     const rate = 0.04;
@@ -10,10 +9,9 @@ const DepositCalculator = () => {
 
   return (
     <div className="mb-10 flex-row">
-    <p>Section 1</p>
     <div className="p-10">
-    <h1 className="flex h-16 items-center justify-between font-bold">Deposit Calculator</h1>
-    <p className="px-14">The current interest rate is {rate*100}%</p>
+    <h1 className="flex h-10 items-center justify-between font-bold">Deposit Calculator</h1>
+    <p className="px-4">The current interest rate is {rate*100}%</p>
     </div>
     <div className="p-10">
     <h2>Your available stars for deposit: {stars}</h2>
