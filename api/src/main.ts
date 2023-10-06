@@ -5,8 +5,6 @@ import { config } from "rxjs";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
 
   const config = new DocumentBuilder()
     .setTitle("M2 api")
@@ -26,5 +24,8 @@ async function bootstrap() {
       // docExpansion: 'none',
     },
   });
+
+  await app.listen(3000);
+  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
