@@ -5,8 +5,9 @@ const DepositPage = () => {
     return (
     <>
     <StudentNavBar />
-     <div>
-        <DepositCalculator />
+     <div className='grid grid-cols-2 gap-4'>
+        <div><p>Card</p></div>
+        <div><DepositCalculator /></div>
      </div>
      </>
     )

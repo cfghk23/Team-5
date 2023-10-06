@@ -31,4 +31,4 @@ const DepositCalculator = () => {
   )
 }
 
-export default DepositCalculator
+export default DepositCalculator;

@@ -6,7 +6,7 @@ const LeaderBoard = () => {
   return (
     <>
     <StudentNavBar />
-    <div className='mx-24 my-12'>
+    <div>
       <LeaderboardTable /> 
     </div>
     </>
