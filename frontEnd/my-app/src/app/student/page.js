@@ -11,7 +11,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Course } from "./comps/course";
 import { RecentActivity } from "./comps/recent-activity";
-import DailyChallenge from "../student/daily-challenges/daily-challenges";
+import DailyChallenge from "./daily-challenges/page";
 
 
 export default function Student() {

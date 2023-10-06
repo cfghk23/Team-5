@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DailyChallenge() {
   const [gameStarted, setGameStarted] = React.useState(false);
@@ -68,14 +69,24 @@ export default function DailyChallenge() {
     />
   ));
 
+  const imageLink = "https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80";
+
   return gameStarted ? (
     <div className=""> 
         <h1 class="place-items-center">Daily Challenges</h1>
         <div className="questions-page-content flex">
-            <Image onClick={imageClick} src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}></Image>
-            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
-            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
-            <Image src="https://images.unsplash.com/photo-1602153883150-a442f874f839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" height={100} width={100}/>
+          <Link href="/student/clicked-daily-challeges">
+            <Image onClick={imageClick} src={imageLink} height={100} width={100} />
+            </Link>
+          <Link href="/student/clicked-daily-challege">
+            <Image onClick={imageClick} src={imageLink} height={100} width={100} />
+            </Link>
+          <Link href="/student/clicked-daily-challege">
+            <Image onClick={imageClick} src={imageLink} height={100} width={100} />
+            </Link>
+          <Link href="/student/clicked-daily-challege">
+            <Image onClick={imageClick} src={imageLink} height={100} width={100} />
+            </Link>
             {/* <img src={Image} alt="balloon "> BALLOON </img> */}
         <div className="questions">{questionElements}</div>
         </div>
