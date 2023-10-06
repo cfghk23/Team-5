@@ -8,7 +8,7 @@ import { CreateStudentDto } from "./dto/create-student.dto";
 export class StudentService {
   constructor(
     @InjectRepository(Student)
-    private readonly usersRepository: Repository<Student>
+    private readonly studentRepository: Repository<Student>
   ) {}
 
   create(createStudentDto: CreateStudentDto): Promise<Student> {
@@ -18,18 +18,18 @@ export class StudentService {
     student.school = createStudentDto.school;
     student.class = createStudentDto.class;
 
-    return this.usersRepository.save(student);
+    return this.studentRepository.save(student);
   }
 
   async findAll(): Promise<Student[]> {
-    return this.usersRepository.find();
+    return this.studentRepository.find();
   }
 
   findOne(id: number): Promise<Student> {
-    return this.usersRepository.findOneBy({ id: id });
+    return this.studentRepository.findOneBy({ id: id });
   }
 
   async remove(id: string): Promise<void> {
-    await this.usersRepository.delete(id);
+    await this.studentRepository.delete(id);
   }
 }
