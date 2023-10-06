@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react";
 import Question from "./question";
 import {
@@ -49,8 +48,14 @@ export default function DailyChallenge() {
   }
 
   function imageClick(){
-    <h1>test</h1>
+    return (
+      <Routes>
+        <Route path="/clicked-daily-challenges" element={<Index />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    );
   }
+
   const questionElements = questions.map((question, index) => (
     <Question
       key={index}
