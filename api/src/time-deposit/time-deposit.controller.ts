@@ -1,15 +1,25 @@
-import { Body, Controller, Post, Get, Delete, Param, ParseIntPipe } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
-import { TimeDepositService } from './time-deposit.service';
-import { CreateTimeDepositDto } from './dto/create-time-deposit.dto';
-import { TimeDeposit } from './time-deposit.entity';
+import {
+  Body,
+  Controller,
+  Post,
+  Get,
+  Delete,
+  Param,
+  ParseIntPipe,
+} from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
+import { TimeDepositService } from "./time-deposit.service";
+import { CreateTimeDepositDto } from "./dto/create-time-deposit.dto";
+import { TimeDeposit } from "./time-deposit.entity";
 @ApiTags("timedeposit")
-@Controller('timedeposit')
+@Controller("timedeposit")
 export class TimeDepositController {
-    constructor(private readonly timeDepositService: TimeDepositService) {}
+  constructor(private readonly timeDepositService: TimeDepositService) {}
 
   @Post()
-  create(@Body() createTimeDepositDto: CreateTimeDepositDto): Promise<TimeDeposit> {
+  create(
+    @Body() createTimeDepositDto: CreateTimeDepositDto
+  ): Promise<TimeDeposit> {
     return this.timeDepositService.create(createTimeDepositDto);
   }
 
