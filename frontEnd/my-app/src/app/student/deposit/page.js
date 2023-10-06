@@ -6,7 +6,6 @@ const DepositPage = () => {
     <>
     <StudentNavBar />
      <div>
-        <div>Section 1</div>
         <DepositCalculator />
      </div>
      </>

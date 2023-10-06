@@ -3,16 +3,32 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const DepositCalculator = () => {
-    const RATE = 0.044;
+    const rate = 0.04;
+    const stars = 100;
     // const { name, class, stars } = fetch(<endpoint>)
-    const [period, setPeriod] = useState("");
-  return (
-    <div className="mb-10">
-    <div>
-    <h1 className="font-bold h-1 p-10">Deposit Calculator</h1>
-    <p className="px-14">The current interest rate is {RATE*100}%</p>
-    </div>
+    const [period, setPeriod] = useState(-1);
 
+  return (
+    <div className="mb-10 flex-row">
+    <p>Section 1</p>
+    <div className="p-10">
+    <h1 className="flex h-16 items-center justify-between font-bold">Deposit Calculator</h1>
+    <p className="px-14">The current interest rate is {rate*100}%</p>
+    </div>
+    <div className="p-10">
+    <h2>Your available stars for deposit: {stars}</h2>
+    <div className="flex flex-row py-3">
+        <button className="button button-primary px-4" onClick={() => setPeriod(1)}>1 month</button>
+        <button className="button button-primary px-4" onClick={() => setPeriod(3)}>3 month</button>
+        <button className="button button-primary px-4" onClick={() => setPeriod(6)}>6 month</button>
+    </div>
+    {period!==-1 && <p>After {period} month, you can get {Math.round(stars*(1+rate*period/12))}</p>}
+    {period!==-1 &&  <div className="px-4 ">
+        <button className="button button-primary px-4" onClick={() => {}}>Confirm</button>
+        <button className="button button-primary px-4" onClick={() => {}}>Cancel</button>
+    </div>}
+
+    </div>
     </div>
   )
 }
