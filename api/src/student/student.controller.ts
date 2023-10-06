@@ -10,7 +10,9 @@ import {
 import { CreateStudentDto } from "./dto/create-student.dto";
 import { StudentService } from "./student.service";
 import { Student } from "./student.entity";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
+@ApiTags("student")
 @Controller("student")
 export class StudentController {
   constructor(private readonly studentService: StudentService) {}
