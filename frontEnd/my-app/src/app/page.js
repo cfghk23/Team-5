@@ -1,6 +1,14 @@
 import Image from 'next/image'
 import Card from "../components/ui/card";
 
-export default function Home() {
-  return <h1>h1</h1>
-}
+
+const Main = () => {
+  return (
+    <div>
+      <h1>test badge card</h1>
+    </div>
+  );
+};
+
+export default Main;
+
