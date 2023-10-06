@@ -10,7 +10,7 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import  Link  from "next/link";
+import Link from "next/link";
 
 export function UserNav() {
   return (
@@ -35,16 +35,16 @@ export function UserNav() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link href="/student/profile">Profile</Link>
-      
-           
+            <Link hr ef="/student/profile" className="w-full">
+              Profile
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-        <Link href="/">log out</Link>
-      
-          
+          <Link href="/" className="w-full">
+            log out
+          </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
