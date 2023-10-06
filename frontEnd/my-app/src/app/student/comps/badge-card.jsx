@@ -58,6 +58,6 @@ export default function BadgeCard(){
                 <p>Participate one offline event</p>
             </CardContent>
         </Card>
-    </div>
+        </div>
     )
 }

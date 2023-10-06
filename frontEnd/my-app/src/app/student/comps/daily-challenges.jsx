@@ -8,11 +8,10 @@ import {
     DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
-  
 
 export default function DailyChallenge(){
     return (
-        <div>
+        <div class="flex">
             <Balloon>
             <Dialog>
                 <DialogTrigger>Open</DialogTrigger>
@@ -20,8 +19,46 @@ export default function DailyChallenge(){
                     <DialogHeader>
                         <DialogTitle>Daily Challenges Question</DialogTitle>
                             <DialogDescription>
-                            This action cannot be undone. This will permanently delete your account
-                            and remove your data from our servers.
+                            first question
+                            </DialogDescription>
+                    </DialogHeader>
+                </DialogContent>
+            </Dialog>
+            </Balloon>
+            <Balloon>
+            <Dialog>
+                <DialogTrigger>Open</DialogTrigger>
+                <DialogContent>
+                    <DialogHeader>
+                        <DialogTitle>Daily Challenges Question</DialogTitle>
+                            <DialogDescription>
+                            second question
+                            </DialogDescription>
+                    </DialogHeader>
+                </DialogContent>
+            </Dialog>
+            </Balloon>
+            <Balloon>
+            <Dialog>
+                <DialogTrigger>Open</DialogTrigger>
+                <DialogContent>
+                    <DialogHeader>
+                        <DialogTitle>Daily Challenges Question</DialogTitle>
+                            <DialogDescription>
+                            Third question
+                            </DialogDescription>
+                    </DialogHeader>
+                </DialogContent>
+            </Dialog>
+            </Balloon>
+            <Balloon>
+            <Dialog>
+                <DialogTrigger>Open</DialogTrigger>
+                <DialogContent>
+                    <DialogHeader>
+                        <DialogTitle>Daily Challenges Question</DialogTitle>
+                            <DialogDescription>
+                            fourth question
                             </DialogDescription>
                     </DialogHeader>
                 </DialogContent>
