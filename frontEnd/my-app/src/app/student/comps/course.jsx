@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/context-menu";
 
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // interface AlbumArtworkProps extends React.HTMLAttributes<HTMLDivElement> {
 //   album: Album
@@ -57,10 +59,15 @@ export function Course({
       </ContextMenu>
 
       {/* name under the photo */}
-      <div className="space-y-1 text-sm">
-        <Progress value={33} />
-        <span> 33% done</span>
-        <h3 className="font-medium leading-none">{course.name}</h3>
+      <Progress value={33} />
+      <div className="flex flex-col space-y-1 text-sm">
+        <div>
+          <span> 33% done</span>
+          <h3 className="font-medium leading-none">{course.name}</h3>
+        </div>
+        <Button asChild>
+          <Link href="student/question">Continue</Link>
+        </Button>
       </div>
     </div>
   );

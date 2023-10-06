@@ -10,14 +10,13 @@ import {
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Course } from "./comps/course";
-import { Image } from "next/image";
+
 
 
 export default function Student() {
     const courses = [{
         name: "course1",
-        iamge:
-            "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2730&q=80",
+        image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2730&q=80",
     }];
 
 
@@ -72,28 +71,42 @@ export default function Student() {
                 {/* create a horizontal line */}
                 <Separator className="my-4" />
 
-                <div className="relative">
-                    {/* allow horizontal scrolling when too much item */}
-                    <ScrollArea>
-                        <div className="flex space-x-4 pb-4">
-                            {courses.map((course) => (
-                                <Course
-                                    key={course.name}
-                                    course={course}
-                                    className="w-[250px]"
-                                    aspectRatio="portrait"
-                                    width={250}
-                                    height={330}
-                                />
-                            ))}
-                        </div>
-                        <ScrollBar orientation="horizontal" />
-                    </ScrollArea>
+                <div className="grid grid-cols-2">
+                    <div className="relative">
+                        {/* allow horizontal scrolling when too much item */}
+                        <ScrollArea>
+                            <div className=" space-x-4 pb-4">
+                                {courses.map((course) => (
+                                    <Course
+                                        key={course.name}
+                                        course={course}
+                                        className="w-[250px]"
+                                        aspectRatio="portrait"
+                                        width={250}
+                                        height={330}
+                                    />
+                                ))}
+                            </div>
+                            <ScrollBar orientation="horizontal" />
+                        </ScrollArea>
+                    </div>
+
+
+                    {/* notification board */}
+                    <Card className="col-span-3">
+                        <CardHeader>
+                            <CardTitle>Recents </CardTitle>
+                            <CardDescription>
+                                Recent activity of your classmates
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+
+                        </CardContent>
+                    </Card>
+
                 </div>
-
-
-
-            </div>
+            </div >
         </>
     )
 }
